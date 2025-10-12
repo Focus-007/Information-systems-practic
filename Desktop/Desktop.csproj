@@ -8,4 +8,14 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="a9a7392fdbbfdb00d58ea345ca96198f.png" />
+    <None Remove="лого.PNG" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="a9a7392fdbbfdb00d58ea345ca96198f.png" />
+    <Resource Include="лого.PNG" />
+  </ItemGroup>
+
 </Project>
