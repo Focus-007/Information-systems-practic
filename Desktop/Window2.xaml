@@ -63,7 +63,7 @@
             </Setter>
         </Style>
     </Window.Resources>
-    <Grid Height="600" VerticalAlignment="Top">
+    <Grid x:Name="Form3" Height="600" VerticalAlignment="Top">
         <Image HorizontalAlignment="Left" Height="100" Margin="10,10,0,0" VerticalAlignment="Top" Width="100" Source="/a9a7392fdbbfdb00d58ea345ca96198f.png"/>
         <Label Content="Добро пожаловать!" HorizontalAlignment="Left" Margin="151,133,0,0" VerticalAlignment="Top" FontSize="30" Foreground="Black"/>
         <Label Content="Создайте свою первую&#xD;&#xA;задачу" HorizontalAlignment="Left" Margin="151,207,0,0" VerticalAlignment="Top" FontSize="30"/>

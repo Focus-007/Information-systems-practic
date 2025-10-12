@@ -21,10 +21,25 @@ namespace Desktop
             InitializeComponent();
 
         }
+        public class NavigationService
+        {
+            public static void OpenWindow(Window currentWindow, Window newWindow)
+            {
+                newWindow.Show(); // Открываем новое окно
+                currentWindow.Close(); // Закрываем текущее окно (если нужно)
+            }
 
+            public static bool? OpenDialogWindow(Window dialogWindow)
+            {
+                return dialogWindow.ShowDialog();
+            }
+        }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            Window2 form3 = new Window2();
+            form3.Show();
+            this.Hide();  // Скрываем Form1, не закрывая её
+            form3.Closed += (s, args) => this.Close();
         }
 
         private void Watermarkedtxt_TextChanged(object sender, TextChangedEventArgs e)
@@ -60,8 +75,12 @@ namespace Desktop
             userInput.Focus();
         }
 
-
-       
-
+        private void Регистрация_Click(object sender, RoutedEventArgs e)
+        {
+            Window1 form2 = new Window1();
+            form2.Show();
+            this.Hide();  // Скрываем Form1, не закрывая её
+            form2.Closed += (s, args) => this.Close();
+        }
     }
 }

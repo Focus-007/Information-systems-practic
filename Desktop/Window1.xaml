@@ -118,12 +118,16 @@
             </Setter>
         </Style>
     </Window.Resources>
-    <Grid Height="600">
-        <Image HorizontalAlignment="Left" Height="150" Margin="74,50,0,0" VerticalAlignment="Top" Width="150" Source="/лого.PNG"/>
-        <Label Content="Добро пожаловать!" HorizontalAlignment="Left" Margin="382,66,0,0" VerticalAlignment="Top" FontSize="24" Height="48" Width="264"/>
-        <Label Content="Имя пользователя" HorizontalAlignment="Left" Margin="379,122,0,0" VerticalAlignment="Top" FontSize="16" Height="37" Width="168"/>
-        <Border BorderBrush="#FF646464" BorderThickness="1" HorizontalAlignment="Left" Height="1" Margin="382,189,0,0" VerticalAlignment="Top" Width="345"/>
-        <TextBox HorizontalAlignment="Left" Height="28" Margin="382,161,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="338" Foreground="#FF979797" BorderBrush="White" RenderTransformOrigin="0.5,0.5" TextChanged="TextBox_TextChanged">
+    <Grid x:Name="Form2" Height="600">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="73*"/>
+            <ColumnDefinition Width="727*"/>
+        </Grid.ColumnDefinitions>
+        <Image HorizontalAlignment="Left" Height="150" Margin="1,50,0,0" VerticalAlignment="Top" Width="150" Source="/лого.PNG" Grid.Column="1"/>
+        <Label Content="Добро пожаловать!" HorizontalAlignment="Left" Margin="309,66,0,0" VerticalAlignment="Top" FontSize="24" Height="48" Width="264" Grid.Column="1"/>
+        <Label Content="Имя пользователя" HorizontalAlignment="Left" Margin="306,122,0,0" VerticalAlignment="Top" FontSize="16" Height="37" Width="168" Grid.Column="1"/>
+        <Border BorderBrush="#FF646464" BorderThickness="1" HorizontalAlignment="Left" Height="1" Margin="309,189,0,0" VerticalAlignment="Top" Width="345" Grid.Column="1"/>
+        <TextBox HorizontalAlignment="Left" Height="28" Margin="309,161,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="338" Foreground="#FF979797" BorderBrush="White" RenderTransformOrigin="0.5,0.5" TextChanged="TextBox_TextChanged" Grid.Column="1">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -133,9 +137,9 @@
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
-        <Label Content="Ваша почта" HorizontalAlignment="Left" Margin="379,194,0,0" VerticalAlignment="Top" FontSize="16" Height="36" Width="110"/>
-        <Border BorderBrush="#FF646464" BorderThickness="1" HorizontalAlignment="Left" Height="1" Margin="382,259,0,0" VerticalAlignment="Top" Width="345"/>
-        <TextBox HorizontalAlignment="Left" Height="27" Margin="382,232,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="345" Foreground="Black" BorderBrush="White" RenderTransformOrigin="0.5,0.5">
+        <Label Content="Ваша почта" HorizontalAlignment="Left" Margin="306,194,0,0" VerticalAlignment="Top" FontSize="16" Height="36" Width="110" Grid.Column="1"/>
+        <Border BorderBrush="#FF646464" BorderThickness="1" HorizontalAlignment="Left" Height="1" Margin="309,259,0,0" VerticalAlignment="Top" Width="345" Grid.Column="1"/>
+        <TextBox HorizontalAlignment="Left" Height="27" Margin="309,232,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="345" Foreground="Black" BorderBrush="White" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -145,9 +149,9 @@
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
-        <Label Content="Пароль" HorizontalAlignment="Left" Margin="379,260,0,0" VerticalAlignment="Top" FontSize="16" Height="37" Width="76"/>
-        <Border BorderBrush="#FF646464" BorderThickness="1" HorizontalAlignment="Left" Height="0" Margin="382,326,0,0" VerticalAlignment="Top" Width="345"/>
-        <TextBox HorizontalAlignment="Left" Height="28" Margin="382,297,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="345" Foreground="Black" BorderBrush="White" RenderTransformOrigin="0.5,0.5">
+        <Label Content="Пароль" HorizontalAlignment="Left" Margin="306,260,0,0" VerticalAlignment="Top" FontSize="16" Height="37" Width="76" Grid.Column="1"/>
+        <Border BorderBrush="#FF646464" BorderThickness="1" HorizontalAlignment="Left" Height="0" Margin="309,326,0,0" VerticalAlignment="Top" Width="345" Grid.Column="1"/>
+        <TextBox HorizontalAlignment="Left" Height="28" Margin="309,297,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="345" Foreground="Black" BorderBrush="White" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -157,9 +161,9 @@
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
-        <Label Content="Повторите пароль" HorizontalAlignment="Left" Margin="379,332,0,0" VerticalAlignment="Top" FontSize="16" Height="36" Width="169"/>
-        <Border BorderBrush="#FF646464" BorderThickness="1" HorizontalAlignment="Left" Height="1" Margin="382,398,0,0" VerticalAlignment="Top" Width="345"/>
-        <TextBox HorizontalAlignment="Left" Height="27" Margin="382,369,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="345" Foreground="Black" BorderBrush="White" RenderTransformOrigin="0.5,0.5">
+        <Label Content="Повторите пароль" HorizontalAlignment="Left" Margin="306,332,0,0" VerticalAlignment="Top" FontSize="16" Height="36" Width="169" Grid.Column="1"/>
+        <Border BorderBrush="#FF646464" BorderThickness="1" HorizontalAlignment="Left" Height="1" Margin="309,398,0,0" VerticalAlignment="Top" Width="345" Grid.Column="1"/>
+        <TextBox HorizontalAlignment="Left" Height="27" Margin="309,369,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="345" Foreground="Black" BorderBrush="White" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -169,10 +173,10 @@
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
-        <Button Style="{DynamicResource Кноопка}"  Content="Зарегестрироваться" HorizontalAlignment="Left" Margin="382,417,0,0" VerticalAlignment="Top" Width="347" Height="47" Background="#FFDE4949" Foreground="White" FontSize="16" BorderBrush="White"/>
-        <Border BorderBrush="#FF646464" BorderThickness="1" HorizontalAlignment="Left" Height="1" Margin="382,259,0,0" VerticalAlignment="Top" Width="345"/>
-        <Border BorderBrush="#FF646464" BorderThickness="1" HorizontalAlignment="Left" Height="1" Margin="384,325,0,0" VerticalAlignment="Top" Width="345"/>
-        <Button Style="{DynamicResource Кннопка2}" Content="Назад" HorizontalAlignment="Left" Height="47" Margin="381,469,0,0" VerticalAlignment="Top" Width="347" Background="#FFDE4949" Foreground="White" BorderBrush="White" FontSize="16"/>
+        <Button Style="{DynamicResource Кноопка}"  Content="Зарегестрироваться" HorizontalAlignment="Left" Margin="309,417,0,0" VerticalAlignment="Top" Width="347" Height="47" Background="#FFDE4949" Foreground="White" FontSize="16" BorderBrush="White" Click="Button_Click" Grid.Column="1"/>
+        <Border BorderBrush="#FF646464" BorderThickness="1" HorizontalAlignment="Left" Height="1" Margin="309,259,0,0" VerticalAlignment="Top" Width="345" Grid.Column="1"/>
+        <Border BorderBrush="#FF646464" BorderThickness="1" HorizontalAlignment="Left" Height="1" Margin="311,325,0,0" VerticalAlignment="Top" Width="345" Grid.Column="1"/>
+        <Button Style="{DynamicResource Кннопка2}" Content="Назад" HorizontalAlignment="Left" Height="47" Margin="308,469,0,0" VerticalAlignment="Top" Width="347" Background="#FFDE4949" Foreground="White" BorderBrush="White" FontSize="16" Grid.Column="1" Click="Button_Click_1"/>
 
     </Grid>
 </Window>
