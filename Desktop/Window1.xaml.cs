@@ -21,91 +21,64 @@ namespace Desktop
     using System.Windows.Controls;
     using System.Windows.Media;
 
-    public class InputValidator
-    {
-        // Паттерн для проверки email
-        private static readonly string EmailPattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
-
-        // Метод для проверки email
-        public static bool IsValidEmail(string email)
-        {
-            if (string.IsNullOrEmpty(email)) return false;
-            return Regex.IsMatch(email, EmailPattern);
-        }
-
-        // Метод для проверки пароля
-        public static bool IsValidPassword(string password)
-        {
-            if (string.IsNullOrEmpty(password)) return false;
-            return password.Length >= 6;
-        }
-
-        // Метод для проверки имени
-        public static bool IsValidName(string name)
-        {
-            if (string.IsNullOrEmpty(name)) return false;
-            return name.Length >= 3;
-        }
-
-        // Вспомогательные методы для WPF TextBox (опционально - для удобства использования)
-        public static void ValidateEmailTextBox(TextBox textBox)
-        {
-            if (!IsValidEmail(textBox.Text))
-            {
-                textBox.BorderBrush = Brushes.Red;
-                //  Дополнительно можно добавить ToolTip с сообщением об ошибке
-                textBox.ToolTip = "Некорректный email";
-            }
-            else
-            {
-                textBox.BorderBrush = Brushes.Green; // Или другой цвет для валидного значения
-                textBox.ToolTip = null; // Убираем ToolTip, если он был
-            }
-        }
-
-        public static void ValidatePasswordTextBox(TextBox textBox)
-        {
-            if (!IsValidPassword(textBox.Text))
-            {
-                textBox.BorderBrush = Brushes.Red;
-                textBox.ToolTip = "Пароль должен содержать не менее 6 символов";
-            }
-            else
-            {
-                textBox.BorderBrush = Brushes.Green;
-                textBox.ToolTip = null;
-            }
-        }
-
-        public static void ValidateNameTextBox(TextBox textBox)
-        {
-            if (!IsValidName(textBox.Text))
-            {
-                textBox.BorderBrush = Brushes.Red;
-                textBox.ToolTip = "Имя должно содержать не менее 3 символов";
-            }
-            else
-            {
-                textBox.BorderBrush = Brushes.Green;
-                textBox.ToolTip = null;
-            }
-        }
-    }
-
     public partial class Window1 : Window
     {
         public Window1()
         {
             InitializeComponent();
+
         }
 
+       private void registr()
+        {
+            string name = TextBox.Text;
+            string email = TextBox1.Text;
+            var password = TextBox2.Text;
+            var password2 = TextBox3.Text;
 
+            // Валидация полей ввода
+            // Имя
+            if (string.IsNullOrEmpty(name))
+            {
+                MessageBox.Show("Поле <<Имя>> должно быть заполненно", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+            else if (name.Length < 3)
+            {
+                MessageBox.Show("Имя должно содержать не менее 3 символов!", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+            //Почта
+            if (!email.Contains("@") || !email.Contains("."))
+            {
+                MessageBox.Show("Неверный формат почты! Почта должна быть в формате *@*.*", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+            //Пароль
+            if (string.IsNullOrEmpty(password))
+            {
+                MessageBox.Show("Заполните поля <<Пароль>>", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+            if (password != password2)
+            {
+                MessageBox.Show("Пароли не совпадают", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+            MessageBox.Show("Вы успешно авторизовались", "Успех", MessageBoxButton.OK);
+            return; ;
+        }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            registr();
+            
+            /*
             Window2 form3 = new Window2();
             form3.Show();
             this.Hide();  // Скрываем Form1, не закрывая её
             form3.Closed += (s, args) => this.Close();
+            */
+            
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)

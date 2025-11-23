@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Desktop"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Icon="/лого.PNG">
+        Title="MainWindow" Height="600" Width="800" Icon="/лого.PNG">
     <Window.Resources>
         <Style x:Key="FocusVisual">
             <Setter Property="Control.Template">
@@ -163,19 +163,19 @@
         </Style>
     </Window.Resources>
     <Grid x:Name="Form1" Height="600">
-        <Label Content="Добро пожаловать!" HorizontalAlignment="Left" Margin="416,51,0,0" VerticalAlignment="Top" FontSize="24"/>
-        <Label Content="Почта" HorizontalAlignment="Left" Margin="412,124,0,0" VerticalAlignment="Top" FontSize="18"/>
-        <Label Content="Пароль" HorizontalAlignment="Left" Margin="413,208,0,0" VerticalAlignment="Top" FontSize="18" RenderTransformOrigin="0.542,1.173"/>
-        <Border BorderBrush="#FF646464" BorderThickness="1" HorizontalAlignment="Left" Height="1" Margin="416,181,0,0" VerticalAlignment="Top" Width="298"/>
-        <Border BorderBrush="#FF646464" BorderThickness="1" HorizontalAlignment="Left" Height="1" Margin="416,181,0,0" VerticalAlignment="Top" Width="298"/>
-        <Border BorderBrush="#FF646464" BorderThickness="1" HorizontalAlignment="Left" Height="1" Margin="416,265,0,0" VerticalAlignment="Top" Width="298"/>
-        <Label Content="Восстановить пароль?" HorizontalAlignment="Left" Margin="545,272,0,0" VerticalAlignment="Top" FontSize="16"/>
-        <Button Style="{DynamicResource Кнопка}" x:Name="Войти" Content="Войти" HorizontalAlignment="Left" Height="40" Margin="416,316,0,0" VerticalAlignment="Top" Width="300" Click="Button_Click" Grid.RowSpan="1" Background="#FFDE4949" Foreground="White" BorderBrush="White" FontSize="16"/>
-        <Button Style="{DynamicResource Кнопка2}" x:Name="Регистрация" Content="Регистрация" HorizontalAlignment="Left" Height="40" Margin="416,358,0,0" VerticalAlignment="Top" Width="300" Background="#FFDE4949" Foreground="White" Padding="0,1,1,1" BorderBrush="White" FontSize="16" Click="Регистрация_Click"/>
+        <Label Content="Добро пожаловать!" HorizontalAlignment="Left" Margin="416,51,0,0" VerticalAlignment="Top" FontSize="26"/>
+        <Label Content="Почта" HorizontalAlignment="Left" Margin="412,147,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Label Content="Пароль" HorizontalAlignment="Left" Margin="413,231,0,0" VerticalAlignment="Top" FontSize="18" RenderTransformOrigin="0.542,1.173"/>
+        <Border BorderBrush="#FF646464" BorderThickness="1" HorizontalAlignment="Left" Height="1" Margin="416,204,0,0" VerticalAlignment="Top" Width="298"/>
+        <Border BorderBrush="#FF646464" BorderThickness="1" HorizontalAlignment="Left" Height="1" Margin="416,204,0,0" VerticalAlignment="Top" Width="298"/>
+        <Border BorderBrush="#FF646464" BorderThickness="1" HorizontalAlignment="Left" Height="1" Margin="416,288,0,0" VerticalAlignment="Top" Width="298"/>
+        <Label Content="Восстановить пароль?" HorizontalAlignment="Left" Margin="543,290,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Button Style="{DynamicResource Кнопка}" x:Name="Войти" Content="Войти" HorizontalAlignment="Left" Height="40" Margin="416,377,0,0" VerticalAlignment="Top" Width="300" Click="Button_Click" Grid.RowSpan="1" Background="#FFDE4949" Foreground="White" BorderBrush="White" FontSize="16"/>
+        <Button Style="{DynamicResource Кнопка2}" x:Name="Регистрация" Content="Регистрация" HorizontalAlignment="Left" Height="40" Margin="416,419,0,0" VerticalAlignment="Top" Width="300" Background="#FFDE4949" Foreground="White" Padding="0,1,1,1" BorderBrush="White" FontSize="16" Click="Регистрация_Click"/>
         <Image HorizontalAlignment="Left" Height="150" Margin="74,50,0,0" VerticalAlignment="Top" Width="150" Source="/лого.PNG"/>
-        <TextBox Name= "userInput" LostFocus="userInput_LostFocus"  HorizontalAlignment="Left" Height="24" Margin="418,157,0,0"  VerticalAlignment="Top" Width="298" BorderBrush="White" TextChanged="userInput_TextChanged"/>
-        <TextBox Name = "Watermarkedtxt" Text="Введите почту" GotFocus="Watermarkedtxt_GotFocus"  HorizontalAlignment="Left" Height="24" Margin="414,157,0,0"  VerticalAlignment="Top" Width="298" BorderBrush="White" TextChanged="Watermarkedtxt_TextChanged"/>
-        <TextBox x:Name= "userInput_Копировать" LostFocus="userInput_LostFocus"  HorizontalAlignment="Left" Height="24" Margin="416,241,0,0"  VerticalAlignment="Top" Width="298" BorderBrush="White" TextChanged="userInput_TextChanged"/>
+        <TextBox x:Name="TextBox" HorizontalAlignment="Left" Height="26" Margin="416,178,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="298" BorderBrush="White" FontSize="14"/>
+        <TextBox x:Name="TextBox1" HorizontalAlignment="Left" Height="26" Margin="416,262,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="298" BorderBrush="White" FontSize="14"/>
+
 
     </Grid>
 </Window>
